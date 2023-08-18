@@ -1,0 +1,13 @@
+import numpy as np
+from sklearn import preprocessing 
+input_labels=['just','patience','justice','truth','patience','loyality','preserverance']
+encoder=preprocessing.LabelEncoder()
+encoder.fit(input_labels)
+test_labels=['truth','just','patience','loyality','preserverance']
+encoded_values=encoder.transform(test_labels)
+print(test_labels)
+print(list(encoded_values))
+encoded_values=[2,0,5,2]
+decoded_list=encoder.inverse_transform(encoded_values)
+print(encoded_values)
+print(list(decoded_list))
